@@ -1,0 +1,20 @@
+{
+  "name": "dcf-pdf-form-app",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Modern React and Express application for filling the DCF PDF template.",
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w apps/backend\" \"npm run dev -w apps/frontend\"",
+    "build": "npm run build -w apps/backend && npm run build -w apps/frontend",
+    "start": "npm run start -w apps/backend",
+    "typecheck": "npm run typecheck -w apps/backend && npm run typecheck -w apps/frontend"
+  },
+  "workspaces": [
+    "apps/frontend",
+    "apps/backend"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "typescript": "^5.5.4"
+  }
+}
